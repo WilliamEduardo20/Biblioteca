@@ -1,0 +1,104 @@
+/*Config da Página*/
+body{
+    height: 100vh;
+}
+header{
+    height: 100%;
+}
+
+/*Menu Lateral*/
+nav.menu-lateral{
+    width: 65px;
+    height: 100%;
+    padding: 40px 0 40px 1%;
+    background-color: #669bbc;
+    box-shadow: 3px 0 0 #c1121f;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+nav.menu-lateral.expandir, nav.menu-lateral.escuro.expandir{
+    width: 300px;
+}
+
+/*Botão Expandir*/
+.btn-expandir{
+    width: 100%;
+    padding-left: 16px;
+}
+.btn-expandir > i{
+    color: #fdf0d5;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*Itens*/
+nav.menu-lateral ul{
+    height: 100%;
+    list-style-type: none;
+}
+nav.menu-lateral ul li.item-menu{
+    transition: .2s;
+}
+nav.menu-lateral ul li.item-menu:hover{
+    background-color: #c1121f;
+}
+nav.menu-lateral ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+nav.menu-lateral ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .6s;
+    opacity: 0;
+}
+nav.menu-lateral.expandir ul li.item-menu a .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+nav.menu-lateral ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+/*Classe de Eventos*/
+nav.menu-lateral ul li.ativo{
+    background-color: #c1121f;
+}
+
+
+/* Menu Lateral Escuro */
+
+/*Menu Lateral*/
+nav.menu-lateral.escuro{
+    width: 65px;
+    height: 100%;
+    padding: 40px 0 40px 1%;
+    background-color: #003049;
+    box-shadow: 3px 0 0 #780000;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/*Itens*/
+nav.menu-lateral ul li.item-menu.escuro:hover{
+    background-color: #780000;
+}
+
+/*Classe de Eventos*/
+nav.menu-lateral ul li.ativo.escuro{
+    background-color: #780000;
+}

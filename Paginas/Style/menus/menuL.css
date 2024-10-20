@@ -1,3 +1,12 @@
+/*Cores Do Site*/
+:root {
+    --vinho: #780000;
+    --vermelho: #c1121f;
+    --branco: #fdf0d5;
+    --azulao: #003049;
+    --azul: #669bbc;
+}
+
 /*Config da Página*/
 body{
     height: 100vh;
@@ -11,8 +20,8 @@ nav.menu-lateral{
     width: 65px;
     height: 100%;
     padding: 40px 0 40px 1%;
-    background-color: #669bbc;
-    box-shadow: 3px 0 0 #c1121f;
+    background-color: var(--azul);
+    box-shadow: 3px 0 0 var(--vermelho);
 
     position: fixed;
     top: 0;
@@ -44,7 +53,7 @@ nav.menu-lateral ul li.item-menu{
     transition: .2s;
 }
 nav.menu-lateral ul li.item-menu:hover{
-    background-color: #c1121f;
+    background-color: var(--vermelho);
 }
 nav.menu-lateral ul li.item-menu a{
     color: white;
@@ -72,7 +81,7 @@ nav.menu-lateral ul li.item-menu a .icon > i{
 
 /*Classe de Eventos*/
 nav.menu-lateral ul li.ativo{
-    background-color: #c1121f;
+    background-color: var(--vermelho);
 }
 
 
@@ -83,8 +92,8 @@ nav.menu-lateral.escuro{
     width: 65px;
     height: 100%;
     padding: 40px 0 40px 1%;
-    background-color: #003049;
-    box-shadow: 3px 0 0 #780000;
+    background-color: var(--azulao);
+    box-shadow: 3px 0 0 var(--vinho);
 
     position: fixed;
     top: 0;
@@ -95,10 +104,10 @@ nav.menu-lateral.escuro{
 
 /*Itens*/
 nav.menu-lateral ul li.item-menu.escuro:hover{
-    background-color: #780000;
+    background-color: var(--vinho);
 }
 
 /*Classe de Eventos*/
 nav.menu-lateral ul li.ativo.escuro{
-    background-color: #780000;
+    background-color: var(--vinho);
 }

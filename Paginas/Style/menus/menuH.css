@@ -1,0 +1,155 @@
+/*Cores Do Site*/
+:root {
+    --vinho: #780000;
+    --vermelho: #c1121f;
+    --branco: #fdf0d5;
+    --azulao: #003049;
+    --azul: #669bbc;
+}
+
+body{
+    transition: .5s;
+}
+
+/*Menu Horizontal*/
+nav.menu-horizontal{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica,  Arial,
+    sans-serif;
+    background-color: var(--azul);
+    height: 8vh;
+}
+nav.menu-horizontal ul.nav-list{
+    list-style: none;
+    display: flex;
+}
+nav.menu-horizontal ul.nav-list li.item-menu{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/*Menu Mobile*/
+nav.menu-horizontal div.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+nav.menu-horizontal div.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: var(--branco);
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/*Personalização Links*/
+nav.menu-horizontal a{
+    color: var(--branco);
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+nav.menu-horizontal a:hover{
+    opacity: 0.7;
+}
+
+/*Personalização Logo*/
+nav.menu-horizontal a.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/*Ativa Menu Mobile*/
+@media (max-width: 999px){
+    body{
+        overflow-x: hidden;
+    }
+
+    /*Menu Horizontal*/
+    nav.menu-horizontal ul.nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: var(--azul);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    nav.menu-horizontal ul.nav-list li.item-menu{
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    /*Menu Mobile*/
+    nav.menu-horizontal div.mobile-menu{
+        display: block;
+    }
+
+
+    /* Menu Horizontal Escuro */
+
+    /*Menu Horizontal*/
+    nav.menu-horizontal ul.nav-list.escuro{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: var(--azulao);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+}
+
+/*Ativa Menu Mobile*/
+nav.menu-horizontal ul.nav-list.active{
+    transform: translateX(0);
+}
+
+/*Animação Links*/
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*Tranforma Menu em X*/
+nav.menu-horizontal div.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+nav.menu-horizontal div.mobile-menu.active .line2{
+    opacity: 0;
+}
+nav.menu-horizontal div.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+/* Menu Horizontal Escuro */
+
+/*Menu Horizontal*/
+nav.menu-horizontal.escuro{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica,  Arial,
+    sans-serif;
+    background-color: var(--azulao);
+    height: 8vh;
+}

@@ -2,3 +2,120 @@
     margin: 0;
     padding: 0;
 }
+
+/*Corpo Do Site*/
+.corpo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 71px;
+}
+
+/*Navegação Das Configurações*/
+section.navegar{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+    height: 100vh;
+    background-color: #F5F5F5;
+}
+hr{ width: 100%;}
+section.navegar i.icone{ display: none;}
+
+/*Conjunto Sub-Páginas De Navegação*/
+ul.sub-paginas{
+    width: 75%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 10px;
+}
+/*Sub-Páginas De Navegação*/
+li.sub-pagina{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+li.sub-pagina:hover{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    cursor: pointer;
+}
+li.sub-pagina i{
+    font-size: 20pt;
+}
+/*Mostra Página Selecionada*/
+li.ativado{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+/*Página De Configuração*/
+section.configurar{
+    width: 75%;
+}
+/*Configurações*/
+.configuracoes{
+
+}
+
+@media (max-width: 700px) {
+    .titulo{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    /*Navegação Das Configurações*/
+    section.navegar{
+        max-width: 62px;
+        min-width: 62px;
+    }
+    section.navegar i.icone{ 
+        display: block;
+        font-size: 38.5px;
+        padding: 7px;
+    }
+    section.navegar h1{ display: none;}
+
+    /*Conjunto Sub-Páginas De Navegação*/
+    ul.sub-paginas{
+        padding: 10px;
+    }
+
+    /*Sub-Páginas De Navegação*/
+    li.sub-pagina{
+        padding: 10px;
+    }
+    li.sub-pagina i{
+        display: block;
+    }
+    li.sub-pagina p{
+        display: none;
+    }
+
+    li.sub-pagina:hover{
+        border-radius: 100%;
+    }
+
+    /*Mostra Página Selecionada*/
+    li.ativado{
+        border-radius: 100%;
+    }
+
+    /*Mostra Icone Selecionado*/
+    li.ativado i{
+        color: #E9CE2C;
+    }
+
+    /*Página De Configuração*/
+    section.configurar{
+        min-width: calc(100% - 62px);
+        max-width: 75%;
+    }
+    section.configurar .titulo{
+        padding: 17.4px;
+    }
+}

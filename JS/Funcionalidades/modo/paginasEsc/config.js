@@ -1,5 +1,5 @@
 /Troca Modo Página Configurações/
-export function config() {
+export function config(modo) {
     //Textos
     const textos = document.querySelectorAll(".texto");
     //Cor de Fundo Aba de Opções
@@ -7,13 +7,25 @@ export function config() {
     //Sub-Páginas
     const pages = document.querySelectorAll(".sub-pagina");
 
-    textos.forEach((element) => {
-        element.classList.toggle("escuro");
-    });
-
-    options.classList.toggle("escuro");
-
-    pages.forEach((element) => {
-        element.classList.toggle("escuro");
-    });
+    if (modo == "escuro") {
+        textos.forEach((element) => {
+            element.classList.add("escuro");
+        });
+    
+        options.classList.add("escuro");
+    
+        pages.forEach((element) => {
+            element.classList.add("escuro");
+        });
+    } else {
+        textos.forEach((element) => {
+            element.classList.remove("escuro");
+        });
+    
+        options.classList.remove("escuro");
+    
+        pages.forEach((element) => {
+            element.classList.remove("escuro");
+        });
+    }
 }

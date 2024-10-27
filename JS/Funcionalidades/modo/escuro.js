@@ -10,6 +10,9 @@ export function mudaModo() {
     const navHorizon = document.querySelector(".menu-horizontal");
     const navList = document.querySelector(".nav-list");
 
+    //Abas
+    const configurar = document.getElementById("configurar");
+
     //Define pagina para Escuro//
     function modoEscuro(){
         pagina.style.backgroundColor = "black";
@@ -22,7 +25,10 @@ export function mudaModo() {
             navHorizon.classList.add("escuro");
             navList.classList.add("escuro");
         }
-        config();
+        
+        if(configurar){
+            config("escuro");
+        }
     }
     
     //Define pagina para Claro//
@@ -37,7 +43,10 @@ export function mudaModo() {
             navHorizon.classList.remove("escuro");
             navList.classList.remove("escuro");
         }
-        config();
+
+        if(configurar){
+            config("claro");
+        }
     }
 
     //Inicia o modo Selecionado//

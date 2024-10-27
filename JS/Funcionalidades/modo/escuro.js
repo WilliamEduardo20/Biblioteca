@@ -1,4 +1,5 @@
 /Trocar Escuro/
+import { config } from "./paginasEsc/config.js";
 export function mudaModo() {
     //Define variáveis//
     const pagina = document.getElementsByTagName("body")[0];
@@ -21,6 +22,7 @@ export function mudaModo() {
             navHorizon.classList.add("escuro");
             navList.classList.add("escuro");
         }
+        config();
     }
     
     //Define pagina para Claro//
@@ -35,6 +37,7 @@ export function mudaModo() {
             navHorizon.classList.remove("escuro");
             navList.classList.remove("escuro");
         }
+        config();
     }
 
     //Inicia o modo Selecionado//

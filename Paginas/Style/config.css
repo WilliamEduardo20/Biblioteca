@@ -1,3 +1,12 @@
+/*Cores Do Site*/
+:root{
+    --ceu: #AFF1F4;
+    --pantano: #085259;
+    --pantano-escuro: #053135;
+    --azul-escuro: #063751;
+}
+
+/*Config da Página*/
 *{
     margin: 0;
     padding: 0;
@@ -61,6 +70,32 @@ section.configurar{
 /*Configurações*/
 .configuracoes{
 
+}
+
+/*Modo Escuro*/
+.corpo .escuro{
+    color: var(--ceu);
+}
+/*Navegação Das Configurações*/
+section.navegar.escuro{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+    height: 100vh;
+    background-color: #2A2A2A;
+}
+/*Sub-Páginas De Navegação*/
+li.sub-pagina.escuro:hover{
+    background-color: #4A4A4A;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/*Mostra Página Selecionada*/
+li.ativado.escuro{
+    background-color: #4A4A4A;
+    border-radius: 20px;
 }
 
 @media (max-width: 700px) {

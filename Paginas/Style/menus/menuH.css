@@ -7,13 +7,23 @@
     --azul: #669bbc;
 }
 
+/*Config da Página*/
 body{
     transition: .5s;
+}
+
+/*Corpo Do Site*/
+.corpo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 56px;
+    overflow: hidden;
 }
 
 /*Menu Horizontal*/
 nav.menu-horizontal{
     position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;

@@ -1,8 +1,12 @@
-import { navLateral } from "../Funcionalidades/menus/menuL.js";
 import { mudaModo } from "../Funcionalidades/modo/escuro.js";
+import { alteracoes } from "./alteracao.js";
 
-navLateral();
+//Ajusta De Acordo Com As Configurações//
+alteracoes();
 
+//Funcionamento Barra//
+
+//Muda Modo//
 mudaModo();
 
 /Seleciona o item e add Fundo/

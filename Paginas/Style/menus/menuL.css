@@ -12,6 +12,14 @@ body{
     height: 100vh;
 }
 
+/*Corpo Do Site*/
+.corpo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 71px;
+    overflow: hidden;
+}
+
 /*Menu Lateral*/
 nav.menu-lateral{
     width: 65px;

@@ -19,26 +19,29 @@ export function alteracoes() {
     if (trilho) {
         trilho.addEventListener('click', () => {
             trilho.classList.toggle('clicado');
-            tipoBarra = (tipoBarra === 1 ? 0 : 1);
-    
-            // Armazena o novo valor de tipoBarra no localStorage
-            localStorage.setItem('tipoBarra', tipoBarra);
-    
-            // Atualiza a barra de navegação e o CSS conforme o tipoBarra
-            navBar.innerHTML = menus[tipoBarra].barra;
-            document.getElementById("menuCss").remove();
-            linkCss.innerHTML += menus[tipoBarra].linkBarra;
-    
-            // Chama a função correspondente à barra selecionada
-            if (tipoBarra === 1) {
-                navHorizontal();
-                //Atualiza Tema Da Barra//
-                mudaModo();
-            } else {
-                navLateral();
-                //Atualiza Tema Da Barra//
-                mudaModo();
-            }
+            // Adiciona um atraso de 0,5 segundos (500 milissegundos)
+            setTimeout(() => {
+                tipoBarra = (tipoBarra === 1 ? 0 : 1);
+        
+                // Armazena o novo valor de tipoBarra no localStorage
+                localStorage.setItem('tipoBarra', tipoBarra);
+        
+                // Atualiza a barra de navegação e o CSS conforme o tipoBarra
+                navBar.innerHTML = menus[tipoBarra].barra;
+                document.getElementById("menuCss").remove();
+                linkCss.innerHTML += menus[tipoBarra].linkBarra;
+        
+                // Chama a função correspondente à barra selecionada
+                if (tipoBarra === 1) {
+                    navHorizontal();
+                    // Atualiza Tema Da Barra
+                    mudaModo();
+                } else {
+                    navLateral();
+                    // Atualiza Tema Da Barra
+                    mudaModo();
+                }
+            }, 500); // 500 milissegundos = 0,5 segundos
         });
     }
 

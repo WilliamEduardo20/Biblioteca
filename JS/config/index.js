@@ -4,8 +4,6 @@ import { alteracoes } from "./alteracao.js";
 //Ajusta De Acordo Com As Configurações//
 alteracoes();
 
-//Funcionamento Barra//
-
 //Muda Modo//
 mudaModo();
 

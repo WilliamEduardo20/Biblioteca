@@ -1,7 +1,8 @@
-import { navLateral } from "../Funcionalidades/menus/menuL.js";
-import { navHorizontal } from "../Funcionalidades/menus/menuH.js";
+import { alteracoes } from "../config/alteracao.js";
 import { mudaModo } from "../Funcionalidades/modo/escuro.js";
 
-navHorizontal();
+//Ajusta De Acordo Com As Configurações//
+alteracoes();
 
+//Muda Modo//
 mudaModo();

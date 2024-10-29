@@ -6,7 +6,7 @@ export const menus = [
             </div>
             <ul>
                 <li class="item-menu">
-                    <a href="../index.html">
+                    <a href="./index.html">
                         <span class="icon">
                             <i class="bi bi-house-door"></i>
                         </span>
@@ -47,7 +47,7 @@ export const menus = [
                 </li>
             </ul>
         </nav>`,
-        linkBarra: `<link rel="stylesheet" href="./Style/menus/menuL.css">`
+        linkBarra: `<link id="menuCss" rel="stylesheet" href="./Style/menus/menuL.css">`,
     },
     {
         barra: `<nav id="navHorizon" class="menu-horizontal">
@@ -58,13 +58,13 @@ export const menus = [
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li class="item-menu"><a href="../index.html"><i class="bi bi-house-door"></i>Home</a></li>
+                <li class="item-menu"><a href="./index.html"><i class="bi bi-house-door"></i>Home</a></li>
                 <li class="item-menu"><a id="modo"><i class="bi bi-circle-half"></i>Modo</a></li>
                 <li class="item-menu"><a href="#"><i class="bi bi-envelope"></i>Sujestões</a></li>
                 <li class="item-menu"><a href="./config.html"><i class="bi bi-gear"></i>Configurações</a></li>
                 <li class="item-menu"><a href=""><i class="bi bi-person-circle"></i>Conta</a></li>
             </ul>
         </nav>`,
-        linkBarra: `<link rel="stylesheet" href="./Style/menus/menuH.css">`
+        linkBarra: `<link id="menuCss" rel="stylesheet" href="./Style/menus/menuH.css">`,
     }
 ];
